@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    주차장 목록 보여주는 list.html
+</head>    
+    
+<body>
+    <h1>
+        주차장리스트        
+    </h1>    
+    <table>
+        {% for i in list_obj %}
+        <tr>
+            <td>{{i.address}}</td>
+            <td>{{i.tel}}</td>
+            <td>{{i.price}}</td>
+            <td>{{i.photo}}</td>        
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

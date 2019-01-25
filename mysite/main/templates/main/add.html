@@ -1,0 +1,58 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="page">
+
+
+	<h1>
+		주차장 등록
+	</h1>
+	<form>
+		<div class="form-group row">
+			<label for="inputAddress" class="col-sm-2 col-form-label word-line">주차장 주소</label>
+			<div class="col-sm-10">
+				<input type="email" class="form-control" id="inputAddress" placeholder="ex) 제주특별자치도 제주시 광양9길 10">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="inputPhone" class="col-sm-2 col-form-label word-line">전화번호</label>
+			<div class="col-sm-10">
+				<input type="tel" class="form-control" id="inputPhone" placeholder="- 없이 입력하세요.">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="inputPrice" class="col-sm-2 col-form-label word-line">시간당 이용 금액</label>
+            <div class="row no-wrap col-sm-10">
+                <div class="col-sm-11">
+                    <input type="number" min="0" step="100" class="form-control" id="inputPrice" placeholder="시간당 이용 금액을 입력하세요.">
+                </div>
+                <label class="col-sm-1 col-form-label">원</label>
+            </div>
+		</div>
+		<div class="form-group row">
+			<label for="inputTime" class="col-sm-2 col-form-label word-line">이용 가능 시간</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="inputTime" placeholder="손님들이 이용할 수 있는 시간을 입력하세요.">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="inputPassword3" class="col-sm-2 col-form-label word-line">사진 등록</label>
+			<div class="input-group mb-3 col-sm-10">
+				<div class="input-group-prepend">
+					<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+				</div>
+				<div class="custom-file">
+					<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+					<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group row right-button-group">
+			<a class="btn btn-secondary right-button" href="#" role="button">취소</a>
+			<a class="btn btn-success right-button" href="#" role="button">확인</a>
+		</div>
+	</form>
+
+</div>
+{% endblock %}

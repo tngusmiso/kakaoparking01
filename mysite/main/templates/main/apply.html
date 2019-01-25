@@ -1,0 +1,64 @@
+{% extends 'main/layout.html' %}
+
+{% block content %}
+<div class="page">
+	<h1>
+		이용 신청하기
+	</h1>
+    
+    <div class="row">
+        
+	<div class="col-sm-6">
+		<div class="form-group row">
+			<label for="labelAddress" class="col-sm-4">주차장 주소</label>
+			<label id="labelAddress" class="col-sm-6">제주특별자치도 제주시 광양9길 10</label>
+		</div>
+		<div class="form-group row">
+			<label for="labelAddress" class="col-sm-4">전화번호</label>
+			<label id="labelAddress" class="col-sm-6">010-9999-5555</label>
+		</div>
+		<div class="form-group row">
+			<label for="labelAddress" class="col-sm-4">시간당 이용 금액</label>
+			<label id="labelAddress" class="col-sm-6">1000 원</label>
+		</div>
+		<div class="form-group row">
+			<label for="labelAddress" class="col-sm-4">이용 가능 시간</label>
+			<label id="labelAddress" class="col-sm-6">시간시간시간</label>
+		</div>
+	</div>
+    
+	<form class="col-sm-6">
+		<div class="form-group row">
+			<label for="inputDate" class="col-sm-3 col-form-label">날짜</label>
+			<div class="col-sm-9">
+				<input type="date" class="form-control" id="inputDate">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="inputTime1" class="col-sm-3 col-form-label">시작 시간</label>
+			<div class="col-sm-9">
+				<input type="time" class="form-control" id="inputTime1">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="inputTime2" class="col-sm-3 col-form-label">종료 시간</label>
+			<div class="col-sm-9">
+				<input type="time" class="form-control" id="inputTime2">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label for="inputCarnum" class="col-sm-3 col-form-label">차량 번호</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" id="inputCarnum">
+			</div>
+		</div>
+
+		<div class="form-group row right-button-group">
+			<a class="btn btn-secondary right-button" href="#" role="button">취소</a>
+			<a class="btn btn-success right-button" href="#" role="button">확인</a>
+		</div>
+	</form>
+        
+    </div>
+</div>
+{% endblock %}

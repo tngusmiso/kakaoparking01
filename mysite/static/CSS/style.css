@@ -1,0 +1,71 @@
+/* layout */
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Jua');
+body {
+    font-family: 'Do Hyeon'
+}
+.mynav {
+    display: flex;
+}
+.nav-left {
+    justify-content: flex-start;
+}
+.nav-right {
+    justify-content: flex-end;
+}
+
+footer {
+    background: #FFBF00;
+    padding: 20px;
+}
+
+.page {
+    margin: 100px;
+}
+
+#mycontainer {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+}
+
+/* list */
+.thead-color {
+    background: #FFBF00;
+}
+
+.table-margin {
+    margin-top: 10px;
+}
+
+.inline {
+    display: flex;
+}
+
+.mycolor {
+    color: green;
+}
+
+/* add & edit */
+
+h1{
+    margin-bottom:1em;
+}
+
+.right-button-group{
+    justify-content: flex-end;
+}
+
+.right-button{
+    margin-left: 20px;
+}
+
+.no-wrap{
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	align-content: stretch
+}
+
+.word-line{
+    word-break: keep-all
+}

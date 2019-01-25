@@ -1,1 +1,18 @@
-홈화면 보여주는 index.html 파일입니다!!
+{% extends 'main/layout.html' %}
+{% block title %}
+카카오 주차장
+{% endblock %}
+{% block content %}
+<div class="page" id="mycontainer">
+    <section>
+        <h1>어디에 주차하지?</h1>
+    
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </section>
+</div>
+
+
+{% endblock %}

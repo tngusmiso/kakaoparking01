@@ -28,7 +28,11 @@
     
     <div class="row">
         <div class="col-sm-4">
-            <img class="detailimg" src="{% static 'images/kakao.jpg' %}" alt="parkingimg">
+            {% if pLot_obj.photo %}
+            <img class="detailimg" src='{{ pLot_obj.photo.url }}'>     
+            {% else %}
+                <img class="detailimg" src="{% static 'images/kakao.jpg' %}" alt="parkingimg">
+            {% endif %}
         </div>
         <div class="col-sm-8">
             <div class="form-group row">
@@ -45,7 +49,7 @@
             </div>
             <div class="form-group row">
                 <label for="labelAddress" class="col-sm-3 detail-title">이용 가능 시간</label>
-                <label id="labelAddress" class="col-sm-5 detail-font">시간시간시간</label>
+                <label id="labelAddress" class="col-sm-5 detail-font">{{pLot_obj.time}}</label>
             </div>
         </div>
         

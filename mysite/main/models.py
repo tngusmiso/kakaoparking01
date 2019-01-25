@@ -7,7 +7,7 @@ class ParkingLot(models.Model):
     tel = models.IntegerField()
     price = models.IntegerField()
     distance = models.IntegerField()
-    photo = models.ImageField()
+    photo = models.ImageField(blank = True, null = True)
     
     def __str__(self):
         return self.address

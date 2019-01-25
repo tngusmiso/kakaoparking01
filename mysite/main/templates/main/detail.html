@@ -10,9 +10,21 @@
     <header>
         <h1>세부사항</h1>
     </header>
-    <div class="kakao-map">
-        <img src="{% static 'images/kakao.jpg' %}" class="img-fluid" alt="Responsive image">
-    </div>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <div id="map" style="width:500px;height:400px;"></div>
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54e0d986be97f038df9b40189afca1d8"></script>
+    
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new daum.maps.LatLng(33.50002358, 126.527621),
+			level: 3
+		};
+
+		var map = new daum.maps.Map(container, options);
+        // var places = new daum.maps.services.Places();
+	</script>
     
     <div class="row">
         <div class="col-sm-4">

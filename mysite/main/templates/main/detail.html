@@ -1,14 +1,52 @@
 {% extends 'main/layout.html' %}
+
 {% block title %}
 세부사항
-{% endblock title%}
+{% endblock title %}
+
 {% block content %}
+{% load staticfiles %}
 <div class="page">
     <header>
         <h1>세부사항</h1>
     </header>
-    <section class="kakao-map">
+    <div class="kakao-map">
         <img src="{% static 'images/kakao.jpg' %}" class="img-fluid" alt="Responsive image">
-    </section>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-4">
+            <img class="detailimg" src="{% static 'images/kakao.jpg' %}" alt="parkingimg">
+        </div>
+        <div class="col-sm-8">
+            <div class="form-group row">
+                <label for="labelAddress" class="col-sm-3 detail-title">주차장 주소</label>
+                <label id="labelAddress" class="col-sm-5 detail-font">{{pLot_obj.address}}</label>
+            </div>
+            <div class="form-group row">
+                <label for="labelAddress" class="col-sm-3 detail-title">전화번호</label>
+                <label id="labelAddress" class="col-sm-5 detail-font">{{pLot_obj.tel}}</label>
+            </div>
+            <div class="form-group row">
+                <label for="labelAddress" class="col-sm-3 detail-title">시간당 이용 금액</label>
+                <label id="labelAddress" class="col-sm-5 detail-font">{{pLot_obj.price}}</label>
+            </div>
+            <div class="form-group row">
+                <label for="labelAddress" class="col-sm-3 detail-title">이용 가능 시간</label>
+                <label id="labelAddress" class="col-sm-5 detail-font">시간시간시간</label>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="form-group row right-button-group">
+        <button type="button" class="btn btn-success right-button">수정</button>
+        <button type="button" class="btn btn-secondary right-button">삭제</button>
+        <button type="button" class="btn btn-secondary right-button">목록</button>
+    </div>
+    <div class="form-group row right-button-group">
+        <button type="button" class="btn btn-secondary right-button">목록</button>
+        <button type="button" class="btn btn-success right-button">이용신청</button>
+    </div>
 </div>
 {% endblock content %}

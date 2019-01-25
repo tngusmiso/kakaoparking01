@@ -1,7 +1,8 @@
 /* layout */
 @import url('https://fonts.googleapis.com/css?family=Do+Hyeon|Jua');
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic&subset=korean');
 body {
-    font-family: 'Do Hyeon'
+    font-family: 'Do Hyeon', sans-serif;
 }
 .mynav {
     display: flex;
@@ -26,6 +27,20 @@ footer {
     display: flex;
     justify-content: center;
     padding: 100px;
+}
+/* detail */
+
+.detailimg {
+    width: 100px;
+    height: 100px;
+}
+
+.detail-title {
+    font-size: 20px;
+}
+
+.detail-font {
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 /* list */
@@ -56,7 +71,7 @@ h1{
 }
 
 .right-button{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .no-wrap{

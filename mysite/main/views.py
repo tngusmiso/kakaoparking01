@@ -15,6 +15,9 @@ def detail(request, pk):
     return render(request, 'main/detail.html', {'pLot_obj':pLot_obj})
 
 
+def detail_test(request):
+    return render(request, 'main/detail.html')
+
 def layout(request):
     return render(request, 'main/layout.html')
 

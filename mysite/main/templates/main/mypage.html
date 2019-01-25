@@ -1,0 +1,96 @@
+{% extends 'main/layout.html' %}
+{% block title %}
+내 주차장
+{% endblock %}
+{% block content %}
+<div class="page">
+    <header>
+        <h1>
+            내 주차장 목록
+        </h1>
+    </header>
+    <div class="inline no-wrap">            
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        <div class="btn-group ml-auto">
+          <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Action
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">거리순</a>
+            <a class="dropdown-item" href="#">가격순</a>
+          </div>
+        </div>
+    </div>
+    
+    
+    <table class="table table-hover table-margin">
+      <thead class="thead-color">
+        <tr>
+          <th class="word-line" scope="col">#</th>
+          <th class="word-line address-space" scope="col">주소</th>
+          <th class="word-line" scope="col">시간당 이용금액</th>
+          <th class="word-line" scope="col">action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Otto</td>
+          <td>Otto</td>
+          <td>
+			<a class="btn btn-success small-btn" href="/edit" role="button">수정</a>
+			<a class="btn btn-secondary small-btn" href="#" role="button">삭제</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td>
+			<a class="btn btn-success small-btn" href="/edit" role="button">수정</a>
+			<a class="btn btn-secondary small-btn" href="#" role="button">삭제</a>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>the Bird</td>
+          <td>Otto</td>
+          <td>
+			<a class="btn btn-success small-btn" href="/edit" role="button">수정</a>
+			<a class="btn btn-secondary small-btn" href="#" role="button">삭제</a>
+          </td>
+        </tr>
+         <tr>
+          <th scope="row">4</th>
+          <td>Otto</td>
+          <td>the Bird</td>
+          <td>
+			<a class="btn btn-success small-btn" href="/edit" role="button">수정</a>
+			<a class="btn btn-secondary small-btn" href="#" role="button">삭제</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <nav aria-label="Page navigation example aria-label-color">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link mycolor" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link mycolor" href="#">1</a></li>
+        <li class="page-item"><a class="page-link mycolor" href="#">2</a></li>
+        <li class="page-item"><a class="page-link mycolor" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link mycolor" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+
+</div>
+
+
+{% endblock %}

@@ -5,12 +5,12 @@ from .models import ParkingLot
 def index(request):
     return render(request, 'main/index.html')
 
-def parking_list(request): 
+def parkinglist(request):    
     pLotList_obj = ParkingLot.objects.all()
-    return render(request, 'main/list.html', {'pLotList_obj': pLotList_obj})
+    return render(request, 'main/parkinglist.html', {'pLotList_obj':pLotList_obj})
 
 
-def detail(request, pk): 
+def detail(request, pk):    
     pLot_obj = ParkingLot.objects.get(pk=pk)
     return render(request, 'main/detail.html', {'pLot_obj':pLot_obj})
 
@@ -26,3 +26,6 @@ def edit(request):
 
 def apply(request):
     return render(request, 'main/apply.html')
+
+def mypage(request):
+    return render(request, 'main/mypage.html')

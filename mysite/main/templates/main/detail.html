@@ -6,12 +6,13 @@
 
 {% block content %}
 {% load staticfiles %}
+<div class="container">
 <div class="page">
     <header>
         <h1>세부사항</h1>
     </header>
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-    <div id="map" style="width:500px;height:400px;"></div>
+    <div id="map" style="width:900px;height:400px; margin-bottom:30px"></div>
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=54e0d986be97f038df9b40189afca1d8"></script>
     
@@ -99,7 +100,7 @@
                         <label class="form-check-label word-line" for="defaultCheck1">11:00-12:00</label>
                     </div>
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-3">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck13">
                         <label class="form-check-label word-line" for="defaultCheck1">12:00-13:00</label>
@@ -163,5 +164,6 @@
         <button type="button" class="btn btn-secondary right-button">목록</button>
         <button type="button" class="btn btn-success right-button">이용신청</button>
     </div>
+</div>
 </div>
 {% endblock content %}

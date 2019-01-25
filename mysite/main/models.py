@@ -6,7 +6,7 @@ class ParkingLot(models.Model):
     time = models.CharField(max_length = 30)
     tel = models.IntegerField()
     price = models.IntegerField()
-    distance = models.IntegerField()
+    distance = models.IntegerField(blank = True, null = True)
     photo = models.ImageField(blank = True, null = True)
     
     def __str__(self):

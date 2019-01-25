@@ -5,30 +5,35 @@
 {% endblock title %}
 
 {% block content %}
-<div class="page">
+<div class="container">
+    
 
+<div class="page">
 
 	<h1>
 		주차장 등록
 	</h1>
-	<form>
+	<form method="POST" action="/parkinglist/" enctype="multipart/form-data">
+        {% csrf_token %}
+        <!-- 로그인시에는 owner값을 변경해야함 -->
+        <input type="hidden" name="owner" value="admin" >
 		<div class="form-group row">
 			<label for="inputAddress" class="col-sm-2 col-form-label word-line">주차장 주소</label>
 			<div class="col-sm-10">
-				<input type="email" class="form-control" id="inputAddress" placeholder="ex) 제주특별자치도 제주시 광양9길 10">
+				<input type="text" class="form-control" id="inputAddress" name="address" placeholder="ex) 제주특별자치도 제주시 광양9길 10">
 			</div>
 		</div>
 		<div class="form-group row">
 			<label for="inputPhone" class="col-sm-2 col-form-label word-line">전화번호</label>
 			<div class="col-sm-10">
-				<input type="tel" class="form-control" id="inputPhone" placeholder="- 없이 입력하세요.">
+				<input type="tel" class="form-control" id="inputPhone" name="tel" placeholder="- 없이 입력하세요.">
 			</div>
 		</div>
 		<div class="form-group row">
 			<label for="inputPrice" class="col-sm-2 col-form-label word-line">시간당 이용 금액</label>
             <div class="row no-wrap col-sm-10">
                 <div class="col-sm-11">
-                    <input type="number" min="0" step="100" class="form-control" id="inputPrice" placeholder="시간당 이용 금액을 입력하세요.">
+                    <input type="number" min="0" step="100" class="form-control" name="price" id="inputPrice" placeholder="시간당 이용 금액을 입력하세요.">
                 </div>
                 <label class="col-sm-1 col-form-label">원</label>
             </div>
@@ -37,101 +42,101 @@
 			<label for="inputTime2" class="col-sm-2 col-form-label">이용 가능 시간</label>
 			<div class="col-sm-5">
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+					<input class="form-check-input" type="checkbox" name="time"  value="00:00-01:00" id="defaultCheck1">
 					<label class="form-check-label word-line" for="defaultCheck1">00:00-01:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+					<input class="form-check-input" type="checkbox" name="time"  value="01:00-02:00" id="defaultCheck2">
 					<label class="form-check-label word-line" for="defaultCheck1">01:00-02:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+					<input class="form-check-input" type="checkbox" name="time"  value="02:00-03:00" id="defaultCheck3">
 					<label class="form-check-label word-line" for="defaultCheck1">02:00-03:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+					<input class="form-check-input" type="checkbox" name="time"  value="03:00-04:00" id="defaultCheck4">
 					<label class="form-check-label word-line" for="defaultCheck1">03:00-04:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
+					<input class="form-check-input" type="checkbox" name="time"  value="04:00-05:00" id="defaultCheck5">
 					<label class="form-check-label word-line" for="defaultCheck1">04:00-05:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
+					<input class="form-check-input" type="checkbox" name="time"  value="05:00-06:00" id="defaultCheck6">
 					<label class="form-check-label word-line" for="defaultCheck1">05:00-06:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck7">
+					<input class="form-check-input" type="checkbox" name="time"  value="06:00-07:00" id="defaultCheck7">
 					<label class="form-check-label word-line" for="defaultCheck1">06:00-07:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck8">
+					<input class="form-check-input" type="checkbox" name="time"  value="07:00-08:00" id="defaultCheck8">
 					<label class="form-check-label word-line" for="defaultCheck1">07:00-08:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck9">
+					<input class="form-check-input" type="checkbox" name="time"  value="08:00-09:00" id="defaultCheck9">
 					<label class="form-check-label word-line" for="defaultCheck1">08:00-09:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck10">
+					<input class="form-check-input" type="checkbox" name="time"  value="09:00-10:00" id="defaultCheck10">
 					<label class="form-check-label word-line" for="defaultCheck1">09:00-10:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck11">
+					<input class="form-check-input" type="checkbox" name="time"  value="10:00-11:00" id="defaultCheck11">
 					<label class="form-check-label word-line" for="defaultCheck1">10:00-11:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck12">
+					<input class="form-check-input" type="checkbox" name="time"  value="11:00-12:00" id="defaultCheck12">
 					<label class="form-check-label word-line" for="defaultCheck1">11:00-12:00</label>
 				</div>
 			</div>
 			<div class="col-sm-5">
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck13">
+					<input class="form-check-input" type="checkbox" name="time"  value="12:00-13:00" id="defaultCheck13">
 					<label class="form-check-label word-line" for="defaultCheck1">12:00-13:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck14">
+					<input class="form-check-input" type="checkbox" name="time"  value="13:00-14:00" id="defaultCheck14">
 					<label class="form-check-label word-line" for="defaultCheck1">13:00-14:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck15">
+					<input class="form-check-input" type="checkbox" name="time"  value="14:00-15:00" id="defaultCheck15">
 					<label class="form-check-label word-line" for="defaultCheck1">14:00-15:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck16">
+					<input class="form-check-input" type="checkbox" name="time"  value="15:00-16:00" id="defaultCheck16">
 					<label class="form-check-label word-line" for="defaultCheck1">15:00-16:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck17">
+					<input class="form-check-input" type="checkbox" name="time"  value="16:00-17:00" id="defaultCheck17">
 					<label class="form-check-label word-line" for="defaultCheck1">16:00-17:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck18">
+					<input class="form-check-input" type="checkbox" name="time"  value="17:00-18:00" id="defaultCheck18">
 					<label class="form-check-label word-line" for="defaultCheck1">17:00-18:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck19">
+					<input class="form-check-input" type="checkbox" name="time"  value="18:00-19:00" id="defaultCheck19">
 					<label class="form-check-label word-line" for="defaultCheck1">18:00-19:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck20">
+					<input class="form-check-input" type="checkbox" name="time"  value="19:00-20:00" id="defaultCheck20">
 					<label class="form-check-label word-line" for="defaultCheck1">19:00-20:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck21">
+					<input class="form-check-input" type="checkbox" name="time"  value="20:00-21:00" id="defaultCheck21">
 					<label class="form-check-label word-line" for="defaultCheck1">20:00-21:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck22">
+					<input class="form-check-input" type="checkbox" name="time"  value="21:00-22:00" id="defaultCheck22">
 					<label class="form-check-label word-line" for="defaultCheck1">21:00-22:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck23">
+					<input class="form-check-input" type="checkbox" name="time"  value="22:00-23:00" id="defaultCheck23">
 					<label class="form-check-label word-line" for="defaultCheck1">22:00-23:00</label>
 				</div>
 				<div class="form-check">
-					<input class="form-check-input" type="checkbox" value="" id="defaultCheck24">
+					<input class="form-check-input" type="checkbox" name="time"  value="23:00-24:00" id="defaultCheck24">
 					<label class="form-check-label word-line" for="defaultCheck1">23:00-24:00</label>
 				</div>
 			</div>
@@ -143,7 +148,7 @@
 					<span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
 				</div>
 				<div class="custom-file">
-					<input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+					<input type="file" class="custom-file-input" name="photo" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
 					<label class="custom-file-label" for="inputGroupFile01">Choose file</label>
 				</div>
 			</div>
@@ -151,9 +156,9 @@
 
 		<div class="form-group row right-button-group">
 			<a class="btn btn-secondary right-button" href="#" role="button">취소</a>
-			<a class="btn btn-success right-button" href="#" role="button">확인</a>
+			<input type="submit" class="btn btn-success right-button" value="확인">
 		</div>
 	</form>
-
+</div>
 </div>
 {% endblock %}
